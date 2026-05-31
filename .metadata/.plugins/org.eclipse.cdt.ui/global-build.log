@@ -1,0 +1,21 @@
+14:44:50 **** Incremental Build of configuration Debug for project LED_toggle_BTN ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DSTM32F446xx -c -I../Inc -I"C:/Users/jacob/Documents/Stm32 baremetal workspace/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/jacob/Documents/Stm32 baremetal workspace/chip_headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "LED_toggle_BTN.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\jacob\STM32CubeIDE\workspace_2.1.1\LED_toggle_BTN\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_toggle_BTN.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED_toggle_BTN.elf
+ 
+arm-none-eabi-size  LED_toggle_BTN.elf 
+arm-none-eabi-objdump -h -S LED_toggle_BTN.elf  > "LED_toggle_BTN.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	LED_toggle_BTN.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED_toggle_BTN.list
+ 
+14:45:04 **** Incremental Build of configuration Debug for project LED_toggle_BTN ****
+make -j8 all 
+arm-none-eabi-size  LED_toggle_BTN.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	LED_toggle_BTN.elf
+Finished building: default.size.stdout
+ 
